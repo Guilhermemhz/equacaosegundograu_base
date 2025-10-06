@@ -56,8 +56,9 @@ public class Equacao {
      * @return Um real com o delta da equacao
      */
     public double getDelta() {
-        //Cálculo delta      
-        return Double.NaN;
+        
+       double delta = Math.pow(valorB, 2.0) - 4*valorA*valorC;
+       return delta;
     }
 
     
@@ -67,8 +68,9 @@ public class Equacao {
      * @return Um real com a primeira raiz.
      */
     public double getRaiz1() {
-        //Cálculo x1  
-        return 0;
+        //Cálculo x1 
+        double x1 = (-valorB + Math.sqrt(getDelta())) / (2.0 * valorA);
+        return x1;
     }
     
     /**
@@ -77,7 +79,8 @@ public class Equacao {
      * @return Um real com a segunda raiz.
      */
     public double getRaiz2() {
-        //Cálculo x2  
-        return 0;
+        //Cálculo x2
+        double x2 = (-valorB - Math.sqrt(getDelta())) / (2.0 * valorA);
+        return x2;
     }
 }
